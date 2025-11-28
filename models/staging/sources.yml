@@ -7,7 +7,7 @@ sources:
     tables:
       - name: municipio # Tabela de PIB
 
-  - name: diretorios # Nova fonte!
+  - name: diretorios 
     database: basedosdados
     schema: br_bd_diretorios_brasil
     tables:

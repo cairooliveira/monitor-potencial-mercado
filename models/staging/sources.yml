@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: basedosdados
+    database: basedosdados
+    schema: br_ibge_pib
+    tables:
+      - name: municipio # Tabela de PIB
+
+  - name: diretorios # Nova fonte!
+    database: basedosdados
+    schema: br_bd_diretorios_brasil
+    tables:
+      - name: municipio # Tabela de Nomes e Geografia

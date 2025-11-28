@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: mart_potencial_mercado
+    description: "Tabela final cruzando PIB e Localização para análise de expansão."
+    columns:
+      - name: municipio_id
+        description: "Chave primária do município (IBGE 7 dígitos)."
+        tests:
+          - unique    
+          - not_null  
+
+      - name: pib
+        description: "Produto Interno Bruto a preços correntes."
+        tests:
+          - not_null
+
+      - name: cluster_mercado
+        description: "Segmentação automática baseada no volume do PIB."
+        tests:
+          - accepted_values: 
+              values: ['Alta Prioridade', 'Média Prioridade', 'Baixa Prioridade']
